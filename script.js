@@ -36,13 +36,14 @@ document.addEventListener('DOMContentLoaded', function() {
         let employee = new Staff (name, salary);
         arr += employee;
         sum += Number(employee.salary);
+        if (document.getElementById('result').style.display == "block") clickResult();
         document.getElementById('add_name').value = '';
         document.getElementById('add_salary').value = '';
     }
 
     function clickResult() {
-        document.getElementById('result').innerHTML = `Суммарная заработная плата всех сотрудников: ${sum}`;
-        document.getElementById('result').style.display = "block";
+        if (sum != 0) document.getElementById('result').innerHTML = `Суммарная заработная плата всех сотрудников: ${sum}`;
+        if (document.getElementById('result').style.display == "") document.getElementById('result').style.display = "block";
     }
 })
 

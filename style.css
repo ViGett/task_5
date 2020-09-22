@@ -15,7 +15,7 @@ body {
 }
 
 #result {
-/*    display: none;*/
+    display: none;
     height: 60px;
     width: 300px;
     background-color: #ff8c00;
